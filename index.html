@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <p>Bem vindo de volta!</p>
+    <h1>LOG IN</h1>
+    <input placeholder="usuario" id="login" />
+    <input placeholder="senha" id="senha" />
+    <button type="submit" onclick="logar()">Login</button>
+    <a href="page2.html"> Ainda não possui Conta? SING UP</a>
+
+    <script>
+      function logar() {
+        var login = document.getElementById('login').value;
+        var senha = document.getElementById('senha').value;
+
+        if (login == 'admin' && senha == 'admin') {
+          alert('Sucesso');
+          location.href = 'page2.html';
+        } else {
+          alert('Usuario ou senha incorretos');
+        }
+      }
+    </script>
+  </body>
+</html>
